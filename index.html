@@ -1,56 +1,54 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="description" content="Thilina Oshan Demel, software developer working with Java, PHP and React.js.">
+    <meta name="theme-color" content="#0c0e1d">
     <title>Thilina Oshan Demel — Software Developer</title>
 
-    <!-- Google Fonts -->
+    <!-- Apply saved theme before paint to avoid a flash -->
+    <script>
+        try {
+            var t = localStorage.getItem('theme') ||
+                (matchMedia('(prefers-color-scheme: light)').matches ? 'light' : 'dark');
+            document.documentElement.setAttribute('data-bs-theme', t);
+        } catch (e) {}
+    </script>
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Work+Sans:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Corrected Bootstrap 5.3.3 CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600;12..96,800&family=Figtree:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <!-- Custom CSS (Relative Path) -->
     <link rel="stylesheet" href="asset/css/index.css">
-    <link rel="icon" href="asset/img/mylogo.jpg" type="image/png">
+    <link rel="icon" href="asset/img/mylogo.jpg" type="image/jpeg">
 </head>
 
 <body>
 
-    <!-- Navbar Placeholder -->
     <div id="navbar-placeholder"></div>
 
     <header class="hero" id="top">
-        <div class="hero-blob"></div>
-        <div class="container hero-content">
+        <div class="container">
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
-                    <span class="eyebrow-tag">Hey, I'm building things 👋</span>
-                    <h1>Thilina Oshan Demel — <em>Software Developer</em> who loves turning ideas into code.</h1>
-                    <p class="lead-text">Passionate about Java, PHP and React.js, I enjoy building efficient
-                        applications and solving coding challenges. Always eager to learn new technologies and sharpen
-                        my craft.</p>
-                    <div class="mt-4">
-                        <a href="#projects" class="btn-playful me-3">See my work</a>
-                        <a href="#contact" class="btn-outline-playful me-3">Get in touch</a>
-                        <a href="/asset/cv/ThilinOshan.pdf" download="ThilinaOshan.pdf" class="btn-outline-playful">My Resume</a>
+                    <span class="status-chip rise"><i></i>Open to work</span>
+                    <h1 class="rise">Hi, I'm Thilina. I turn <span class="grad-text">ideas into working code.</span></h1>
+                    <p class="lead-text rise">Software developer working with Java, PHP and React.js. I like building efficient applications, solving coding challenges and picking up new technologies.</p>
+                    <div class="hero-actions rise">
+                        <a href="#projects" class="btn-playful">See my work</a>
+                        <a href="#contact" class="btn-outline-playful">Get in touch</a>
+                        <a href="asset/cv/ThilinOshan.pdf" download="ThilinaOshan.pdf" class="btn-outline-playful">Download résumé</a>
                     </div>
                 </div>
                 <div class="col-lg-5">
-                    <div class="code-card">
-                        <span class="kw">const</span> developer = {<br>
-                        &nbsp;&nbsp;name: <span class="str">"Thilina Oshan Demel"</span>,<br>
-                        &nbsp;&nbsp;stack: [<span class="str">"Java"</span>, <span class="str">"React.js"</span>, <span
-                            class="str">"PHP"</span>],<br>
-                        &nbsp;&nbsp;<span class="fn">solveChallenges</span>(): <span class="str">"always"</span><br>
-                        };
+                    <div class="code-card rise" aria-hidden="true">
+                        <div class="dots"><i></i><i></i><i></i></div>
+                        <pre id="typed"></pre>
                     </div>
+                    <noscript><pre>const developer = { name: "Thilina Oshan Demel", stack: ["Java", "React.js", "PHP"] };</pre></noscript>
                 </div>
             </div>
         </div>
@@ -58,119 +56,103 @@
 
     <section id="about">
         <div class="container">
-            <div class="section-tag">01 — About</div>
-            <h2 class="section-title">A little about me</h2>
+            <h2 class="section-title">About me</h2>
             <div class="about-wrap">
                 <div class="about-text">
-                    <p>I'm a software developer skilled in Java, HTML, CSS, JavaScript, PHP, and React.js. I enjoy
-                        building efficient applications and solving coding challenges — the kind of problems that make
-                        you close the laptop and keep thinking about them anyway.</p>
-                    <p>I'm always eager to learn new technologies and improve my skills, whether that means picking up a
-                        new framework or refining how I structure the code I already know well.</p>
+                    <p>I'm a software developer skilled in Java, HTML, CSS, JavaScript, PHP and React.js. I enjoy building efficient applications and solving coding challenges, the kind of problems you keep thinking about after closing the laptop.</p>
+                    <p>I'm always learning, whether that's a new framework or a cleaner way to structure code I already know well.</p>
                 </div>
                 <div class="stat-row">
-                    <div class="stat-box">
-                        <h3>6+</h3>
-                        <p class="mb-0">Projects built</p>
-                    </div>
-                    <div class="stat-box">
-                        <h3>6</h3>
-                        <p class="mb-0">Core technologies</p>
-                    </div>
+                    <div class="glow-card stat-box"><h3 class="grad-text">6+</h3><p>Projects built</p></div>
+                    <div class="glow-card stat-box"><h3 class="grad-text">8</h3><p>Tools in my stack</p></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="skills" style="background:#FBF7FF;">
+    <section id="skills">
         <div class="container">
-            <div class="section-tag">02 — Skills</div>
             <h2 class="section-title">Tools I build with</h2>
-            <div>
-                <span class="skill-pill p1">Java</span>
-                <span class="skill-pill p2">JavaScript</span>
-                <span class="skill-pill p3">React.js</span>
-                <span class="skill-pill p4">PHP</span>
-                <span class="skill-pill p1">HTML5</span>
-                <span class="skill-pill p2">CSS3</span>
-                <span class="skill-pill p3">MySQL</span>
-                <span class="skill-pill p4">Git &amp; GitHub</span>
+            <div class="skills-wrap">
+                <span class="skill-pill">Java</span>
+                <span class="skill-pill">JavaScript</span>
+                <span class="skill-pill">React.js</span>
+                <span class="skill-pill">PHP</span>
+                <span class="skill-pill">HTML5</span>
+                <span class="skill-pill">CSS3</span>
+                <span class="skill-pill">MySQL</span>
+                <span class="skill-pill">Git &amp; GitHub</span>
             </div>
         </div>
     </section>
 
     <section id="projects">
         <div class="container">
-            <div class="section-tag">03 — Projects</div>
             <h2 class="section-title">Things I've built</h2>
+            <p class="section-sub">A mix of live projects and work in progress.</p>
             <div class="row g-4">
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-1">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Gym Management Platform</h4>
-                        <p>A comprehensive solution for managing gym operations, including member management and scheduling.</p>
-                        <div><span class="tech-tag">Type Script</span></div>
-                        <div class="mt-3"><a class="project-link" href="https://fit-pulse-psi.vercel.app/" target="_blank">View project</a></div>
-                    </div>
+                        <p>Manage gym operations, including members and scheduling.</p>
+                        <div><span class="tech-tag">TypeScript</span></div>
+                        <a class="project-link" href="https://fit-pulse-psi.vercel.app/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-2">
-                        <h4>Modern Clothing Store & E-Commerce Web Application</h4>
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
+                        <h4>Modern Clothing Store</h4>
                         <p>A responsive online store with cart, checkout flow and product filtering.</p>
-                        <div><span class="tech-tag">HTML5</span><span class="tech-tag">CSS</span><span
-                                class="tech-tag">JavaScript</span></div>
-                        <div class="mt-3"><a class="project-link" href="https://sky-nine-puce.vercel.app/" target="_blank">View
-                                project</a></div>
-                    </div>
+                        <div><span class="tech-tag">HTML5</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                        <a class="project-link" href="https://sky-nine-puce.vercel.app/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-3">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Weather Dashboard</h4>
                         <p>Live weather lookup by city with a 5-day forecast, built on a public API.</p>
-                        <div><span class="tech-tag">TypeScript</span><span class="tech-tag">CSS</span><span
-                                class="tech-tag">API</span></div>
-                        <div class="mt-3"><a class="project-link" href="https://thilina-oshan.github.io/Weatherline/" target="_blank">View project</a></div>
-                    </div>
+                        <div><span class="tech-tag">TypeScript</span><span class="tech-tag">CSS</span><span class="tech-tag">API</span></div>
+                        <a class="project-link" href="https://thilina-oshan.github.io/Weatherline/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-4">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Blog CMS</h4>
                         <p>A lightweight content management system for publishing and editing posts.</p>
-                        <div><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span
-                                class="tech-tag">JavaScript</span></div>
-                        <div class="mt-3"><a class="project-link" href="#" target="_blank">View project</a></div>
-                    </div>
+                        <div><span class="tech-tag">PHP</span><span class="tech-tag">MySQL</span><span class="tech-tag">JavaScript</span></div>
+                        <span class="project-link soon">Link coming soon</span>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-1">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Real-Time Chat App</h4>
                         <p>A messaging app with live delivery using sockets and message history.</p>
                         <div><span class="tech-tag">Java</span><span class="tech-tag">WebSocket</span></div>
-                        <div class="mt-3"><a class="project-link" href="#">View project</a></div>
-                    </div>
+                        <span class="project-link soon">Link coming soon</span>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-2">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Inventory Management System</h4>
                         <p>Tracks stock levels, suppliers and orders for a small retail business.</p>
-                        <div><span class="tech-tag">HTML5</span><span class="tech-tag">CSS</span><span
-                                class="tech-tag">JavaScript</span></div>
-                        <div class="mt-3"><a class="project-link" href="https://stock-management-system-ten-pi.vercel.app/" target="_blank">View project</a></div>
-                    </div>
+                        <div><span class="tech-tag">HTML5</span><span class="tech-tag">CSS</span><span class="tech-tag">JavaScript</span></div>
+                        <a class="project-link" href="https://stock-management-system-ten-pi.vercel.app/" target="_blank" rel="noopener">View project <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17 17 7M8 7h9v9" /></svg></a>
+                    </article>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <div class="project-card card-accent-3">
+                <div class="col-md-6 col-xl-4">
+                    <article class="glow-card project-card">
                         <h4>Portfolio Site Generator</h4>
-                        <p>A small tool that turns a JSON profile into a ready-to-host portfolio page.</p>
+                        <p>Turns a JSON profile into a ready-to-host portfolio page.</p>
                         <div><span class="tech-tag">React.js</span><span class="tech-tag">JavaScript</span></div>
-                        <div class="mt-3"><a class="project-link" href="#" target="_blank">View project</a></div>
-                    </div>
+                        <span class="project-link soon">Link coming soon</span>
+                    </article>
                 </div>
 
             </div>
@@ -181,25 +163,20 @@
         <div class="container">
             <div class="contact-band">
                 <h2>Let's build something together</h2>
-                <p>Open to new opportunities, freelance work, or just a good conversation about code. Reach out anytime.
-                </p>
+                <p>Open to new roles, freelance work, or a good conversation about code.</p>
                 <div class="contact-links">
-                    <a href="mailto:thilinaoshandemel@gmail.com">thilinaoshandemel@gmail.com</a>
-                    <a href="https://github.com/Thilina-Oshan" target="_blank" rel="noopener">GitHub</a>
-                    <a href="https://linkedin.com/in/thilina-oshan-demel-9326212ba" target="_blank" rel="noopener">LinkedIn</a>
+                    <a class="btn-playful" href="mailto:thilinaoshandemel@gmail.com">Email me</a>
+                    <a class="btn-outline-playful" href="https://github.com/Thilina-Oshan" target="_blank" rel="noopener">GitHub</a>
+                    <a class="btn-outline-playful" href="https://linkedin.com/in/thilina-oshan-demel-9326212ba" target="_blank" rel="noopener">LinkedIn</a>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer Placeholder -->
     <div id="footer-placeholder"></div>
 
-    <!-- Corrected Bootstrap 5.3.3 JS Bundle -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
-    <!-- Custom Main JS (Relative Path) -->
     <script src="asset/js/main.js"></script>
-
 </body>
 
+</html>
