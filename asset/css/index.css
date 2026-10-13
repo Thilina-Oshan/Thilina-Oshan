@@ -359,3 +359,32 @@ footer { text-align: center; padding: 2rem 1rem 2.5rem; color: var(--muted); fon
     *, *::before, *::after { animation: none !important; transition: none !important; }
     .hero .rise { opacity: 1; transform: none; }
 }
+
+.profile-photo {
+    margin: 0 auto;
+    width: 100%;
+    max-width: 320px;          /* stops it getting huge on tablets */
+    aspect-ratio: 1 / 1;       /* keeps it square at every width */
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 4px;              /* gradient border */
+    background: linear-gradient(135deg, #7c5cff, #ff5ca8, #ffb347);
+    box-shadow: 0 20px 50px rgba(124, 92, 255, .25);
+    transition: transform .3s ease;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;         /* crops instead of stretching */
+    object-position: center top; /* keeps your face in frame */
+    border-radius: 24px;
+    display: block;
+}
+
+.profile-photo:hover { transform: rotate(-2deg) scale(1.03); }
+
+@media (prefers-reduced-motion: reduce) {
+    .profile-photo { transition: none; }
+    .profile-photo:hover { transform: none; }
+}
