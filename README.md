@@ -18,4 +18,4 @@ Welcome to my personal portfolio repository! This site showcases my web developm
 
 1. **Clone the repository:**
    ```bash
-   git clone [https://github.com/Thilina-Oshan/My-Portfolio.git](https://github.com/Thilina-Oshan/My-Portfolio.git)
+   git clone [https://github.com/Thilina-Oshan/My-Portfolio.git](https://github.com/Thilina-Oshan/My-Portfolio.git)](https://github.com/Thilina-Oshan/Thilina-Oshan)
